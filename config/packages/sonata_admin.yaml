@@ -1,0 +1,28 @@
+sonata_admin:
+    title: 'Score App'
+    dashboard:
+        blocks:
+            - { type: sonata.admin.block.admin_list, position: left }
+        groups:
+            events:
+                icon:            '<i class="fa fa-calendar"></i>'
+                label:                "Events"
+                label_catalogue:      ~
+                items:
+                    - admin.group
+                    - admin.event
+                #roles: [ ROLE_ADMIN ]
+            settings:
+                icon:            '<i class="fa fa-cog"></i>'
+                label:                "Settings"
+                label_catalogue:      ~
+                items:
+                    - admin.college
+                    - admin.sport
+                #roles: [ ROLE_ADMIN ]
+
+
+sonata_block:
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
