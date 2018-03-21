@@ -2,3 +2,7 @@ sonata_core:
     form:
         mapping:
             enabled: false
+
+sonata_user:
+    security_acl: true
+    manager_type: orm # can be orm or mongodb

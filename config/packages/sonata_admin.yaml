@@ -11,7 +11,7 @@ sonata_admin:
                 items:
                     - admin.group
                     - admin.event
-                #roles: [ ROLE_ADMIN ]
+                roles: [ ROLE_ADMIN ]
             settings:
                 icon:            '<i class="fa fa-cog"></i>'
                 label:                "Settings"
@@ -19,7 +19,7 @@ sonata_admin:
                 items:
                     - admin.college
                     - admin.sport
-                #roles: [ ROLE_ADMIN ]
+                roles: [ ROLE_SUPER_ADMIN ]
 
 
 sonata_block:
