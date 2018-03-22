@@ -1,0 +1,18 @@
+body {
+	background-color: #070707;
+	color: white;
+}
+
+.logo {
+	height: 100px;
+	width: auto;
+}
+
+.nav-link, .nav-link:active, .nav-link:visited {
+	background-color: #22252a;
+	color: #e9ecef;
+}
+.nav-link:hover {
+	background-color: #32383e;
+	color: #e9ecef;
+}

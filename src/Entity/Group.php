@@ -29,6 +29,7 @@ class Group
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Event", mappedBy="group")
+     * @ORM\OrderBy({"startTime" = "DESC"})
      */
     private $events;
 
@@ -97,6 +98,16 @@ class Group
     public function __toString()
     {
         return $this->sport->getName() . ' -> ' . $this->getName();
+    }
+
+    /**
+     * @param mixed $events
+     * @return Group
+     */
+    public function setEvents($events)
+    {
+        $this->events = $events;
+        return $this;
     }
 
 }

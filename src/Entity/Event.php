@@ -17,6 +17,11 @@ class Event
     protected $id;
 
     /**
+     * @ORM\Column(type="integer", length=1)
+     */
+    protected $state = 1;
+
+    /**
      * @ORM\Column(type="datetime")
      */
     protected $startTime;
@@ -43,16 +48,17 @@ class Event
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Score", mappedBy="event", cascade={"persist"})
+     * @ORM\OrderBy({"score" = "DESC"})
      */
     protected $scores;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\College")
+     * @ORM\ManyToOne(targetEntity="App\Entity\College", fetch="EAGER")
      */
     private $competitor1 = null;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\College")
+     * @ORM\ManyToOne(targetEntity="App\Entity\College", fetch="EAGER")
      */
     private $competitor2 = null;
 
@@ -233,5 +239,24 @@ class Event
         }
         return $this->getGroup()->getSport()->getName() . ' -> ' . $this->getGroup()->getName() . ' -> ' . $this->getName();
     }
+
+    /**
+     * @param mixed $state
+     * @return Event
+     */
+    public function setState($state)
+    {
+        $this->state = $state;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getState()
+    {
+        return $this->state;
+    }
+
 
 }

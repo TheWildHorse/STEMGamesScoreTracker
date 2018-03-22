@@ -14,17 +14,17 @@ class College
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\Column(type="text")
      */
-    private $name;
+    protected $name;
 
     /**
      * @ORM\Column(type="string", length=2)
      */
-    private $country;
+    protected $country;
 
     /**
      * @return mixed

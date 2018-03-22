@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ScoreRepository")
@@ -24,7 +25,7 @@ class Score
     private $event;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\College")
+     * @ORM\ManyToOne(targetEntity="App\Entity\College", fetch="EAGER")
      * @var College
      */
     private $college;
@@ -34,6 +35,12 @@ class Score
      * @var float
      */
     private $score;
+
+    /**
+     * @ORM\Column(type="text")
+     * @var string
+     */
+    protected $teamName;
 
     /**
      * @return int

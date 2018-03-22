@@ -12,6 +12,7 @@
         "sonata-project/easy-extends-bundle": "^2.5",
         "sonata-project/user-bundle": "^4.1",
         "symfony/acl-bundle": "^1.0",
+        "symfony/cache": "^4.0",
         "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.0",
@@ -23,6 +24,7 @@
         "symfony/yaml": "^4.0"
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.0",
         "symfony/dotenv": "^4.0"
     },
     "config": {

@@ -19,7 +19,7 @@ class Sport
     /**
      * @ORM\Column(type="text")
      */
-    private $name;
+    private $name = '';
 
     /**
      * @ORM\Column(type="string", length=20)

@@ -15,6 +15,12 @@ class HomepageController extends Controller
      */
     public function getHomepage()
     {
-        return $this->render('PublicFacing/homepage.html.twig');
+        $sports = $this->getDoctrine()
+            ->getRepository('App:Sport')
+            ->findAll();
+
+        return $this->render('PublicFacing/homepage.html.twig', [
+            'sports' => $sports,
+        ]);
     }
 }
