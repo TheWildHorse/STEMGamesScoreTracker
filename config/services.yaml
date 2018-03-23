@@ -59,3 +59,10 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, label: Score }
         public: true
+
+    admin.scorekeeperauth:
+        class: App\Admin\ScorekeeperAuthenticationAdmin
+        arguments: [~, App\Entity\ScorekeeperAuthentication, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Scorekeepers }
+        public: true

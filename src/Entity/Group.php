@@ -97,6 +97,9 @@ class Group
 
     public function __toString()
     {
+        if($this->getName() === null) {
+            return '';
+        }
         return $this->sport->getName() . ' -> ' . $this->getName();
     }
 

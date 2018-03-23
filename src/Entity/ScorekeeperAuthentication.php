@@ -19,12 +19,18 @@ class ScorekeeperAuthentication
     /**
      * @ORM\Column(type="text")
      */
-    private $key;
+    private $code;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Group")
      */
     private $group;
+
+
+    public function __construct()
+    {
+        $this->setCode(base64_encode(random_bytes(30)));
+    }
 
     /**
      * @return mixed
@@ -47,18 +53,18 @@ class ScorekeeperAuthentication
     /**
      * @return mixed
      */
-    public function getKey()
+    public function getCode()
     {
-        return $this->key;
+        return $this->code;
     }
 
     /**
-     * @param mixed $key
+     * @param mixed $code
      * @return ScorekeeperAuthentication
      */
-    public function setKey($key)
+    public function setCode($code)
     {
-        $this->key = $key;
+        $this->code = $code;
         return $this;
     }
 
@@ -78,6 +84,18 @@ class ScorekeeperAuthentication
     {
         $this->group = $group;
         return $this;
+    }
+
+    public function getDashboardURL() {
+        return '/scorekeeper/'.$this->getCode();
+    }
+
+    public function getLink() {
+        return '<a href="'.$this->getDashboardURL().'" target="_blank">Link to Scorekeeper Dashboard</a>';
+    }
+
+    public function getQR() {
+        return '<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' . $this->getDashboardURL() . '"/>';
     }
 
 }
