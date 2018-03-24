@@ -1,0 +1,132 @@
+{% extends 'Scorekeeper/base.html.twig' %}
+{% use 'bootstrap_3_horizontal_layout.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+                <b>Name: </b> {{ event.name }}<br>
+                <b>Start Time: </b> {{ event.startTime|date('Y-m-d H:i') }}<br>
+            </p>
+            <br>
+            <h1 style="font-size: 3rem">Event Status</h1>
+            <div class="btn-group" role="group" id="state-picker" aria-label="Event State">
+                <button type="button" data-id="1" class="btn {% if event.state == 1%}btn-secondary{% endif %}" style="font-size: 2.5rem"><i class="fa fa-clock-o"></i> Scheduled</button>
+                <button type="button" data-id="2" class="btn {% if event.state == 2%}btn-secondary{% endif %}" style="font-size: 2.5rem"><i class="fa fa-hourglass-half"></i> In Progress</button>
+                <button type="button" data-id="3" class="btn {% if event.state == 3%}btn-secondary{% endif %}" style="font-size: 2.5rem"><i class="fa fa-flag-checkered"></i> Finished</button>
+            </div>
+            <br><br>
+            <h1 style="font-size: 3rem">Score</h1>
+            <table class="table table-bordered table-striped table-dark">
+                <thead>
+                <tr>
+                    <th>Competitor</th>
+                    <th>College</th>
+                    <th>Score</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for score in event.scores %}
+                <tr data-id="{{ score.id }}">
+                    <td><input class="form-control teamName" style="font-size: 1em;" type="text" value="{{ score.teamName }}"></td>
+                    <td>
+                        <select class="form-control college" name="" style="height: auto; font-size: 1em;">
+                            <option>Choose a College</option>
+                            {% for college in colleges %}
+                            <option value="{{ college.id }}" {% if score.college == college %}selected{% endif %}>{{ college.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <input class="form-control score" step="any" style="width: 200px; font-size: 1em;" type="number" value="{{ score.score }}" min="0">
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <button class="btn" style="font-size: 1em; width: 100%;" id="add-row">Add Row</button>
+            <br>
+            <br>
+            <button class="btn" id="save-changes" style="font-size: 1em; width: 100%;">Save Changes</button>
+        </div>
+    </div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        <tr>
+            <td>
+                <input class="form-control teamName" style="font-size: 1em;" type="text" value="">
+            </td>
+            <td>
+                <select class="form-control college" style="height: auto; font-size: 1em;">
+                    <option>Choose a College</option>
+                    {% for college in colleges %}
+                    <option value="{{ college.id }}">{{ college.name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td>
+                <input class="form-control score" step="any" style="width: 200px; font-size: 1em;" type="number" min="0">
+            </td>
+        </tr>
+    </script>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        var entryTemplate = Handlebars.compile($('#entry-template').html())
+
+        $(document).ready(function() {
+            $('#add-row').click(function() {
+                $('tbody').append(entryTemplate);
+            });
+
+            $('#save-changes').click(function () {
+                var data = [];
+                $('tbody tr').each(function (i, row) {
+                    if($(row).find('.teamName').val() == "" || $(row).find('.college').val() == "" || $(row).find('.score').val() == "") {
+                        return;
+                    }
+                    data.push({
+                        teamName: $(row).find('.teamName').val(),
+                        collegeId: $(row).find('.college').val(),
+                        score: $(row).find('.score').val()
+                    });
+                })
+
+                var self = $(this);
+                $(this).prop('disabled', true);
+                $(this).html('Saving...');
+                $.ajax({
+                    type: "POST",
+                    url: "{{ path('scorekeeper.editor.save', {'code': code, 'eventId': event.id}) }}",
+                    data: JSON.stringify(data),
+                    contentType: 'application/json'
+                }).done(function (data) {
+                    $(self).prop('disabled', false);
+                    if(data.success === true) {
+                        $(self).html('Saved.');
+                    }
+                    else {
+                        $(self).html('Error occurred! Try again.');
+                    }
+                    setTimeout(function() {
+                        $(self).html('Save changes.');
+                    }, 3000);
+                });
+            });
+
+            $('#state-picker button').click(function() {
+                var self = $(this);
+                $.ajax({
+                    type: "POST",
+                    url: "{{ path('scorekeeper.editor.state.save', {'code': code, 'eventId': event.id}) }}",
+                    data: {id:$(self).data('id')}
+                }).done(function() {
+                    $('#state-picker button').removeClass('btn-secondary');
+                    $(self).addClass('btn-secondary');
+                });
+            });
+        });
+    </script>
+{% endblock %}

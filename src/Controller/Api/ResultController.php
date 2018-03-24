@@ -4,11 +4,13 @@
 namespace App\Controller\Api;
 
 use App\Entity\Group;
+use App\Entity\Score;
 use App\Enum\RankingTypeEnum;
 use Doctrine\Common\Collections\ArrayCollection;
 use Swagger\Annotations as SWG;
 use Nelmio\ApiDocBundle\Annotation\Model;
 use Symfony\Component\Cache\Simple\FilesystemCache;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ResultController extends BaseAPIController

@@ -118,4 +118,22 @@ class Score
     {
         return $this->getCollege()->getName() . ' - ' . $this->getScore();
     }
+
+    /**
+     * @param string $teamName
+     * @return Score
+     */
+    public function setTeamName(string $teamName): Score
+    {
+        $this->teamName = $teamName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTeamName(): string
+    {
+        return $this->teamName;
+    }
 }

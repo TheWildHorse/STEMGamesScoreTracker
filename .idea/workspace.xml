@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bf2ad7-3569-4ed8-8e32-2584ef604603" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Admin/ScorekeeperAuthenticationAdmin.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Scorekeeper/ScoreEditorController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Api/ScorekeeperController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/Scorekeeper/base.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/Scorekeeper/editor_1v1.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/Scorekeeper/editor_placements.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/Scorekeeper/event_picker.html.twig" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config/packages/sonata_admin.yaml" afterPath="$PROJECT_DIR$/config/packages/sonata_admin.yaml" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" afterPath="$PROJECT_DIR$/config/services.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Group.php" afterPath="$PROJECT_DIR$/src/Entity/Group.php" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Api/ResultController.php" afterPath="$PROJECT_DIR$/src/Controller/Api/ResultController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Scorekeeper/ScoreEditorController.php" afterPath="$PROJECT_DIR$/src/Controller/Scorekeeper/ScoreEditorController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Event.php" afterPath="$PROJECT_DIR$/src/Entity/Event.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Score.php" afterPath="$PROJECT_DIR$/src/Entity/Score.php" />
       <change beforePath="$PROJECT_DIR$/src/Entity/ScorekeeperAuthentication.php" afterPath="$PROJECT_DIR$/src/Entity/ScorekeeperAuthentication.php" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ScoreType.php" afterPath="$PROJECT_DIR$/src/Form/ScoreType.php" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ScoreRepository.php" afterPath="$PROJECT_DIR$/src/Repository/ScoreRepository.php" />
+      <change beforePath="$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig" afterPath="$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,14 +28,73 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ScoreRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repository/ScoreRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+              <folding>
+                <element signature="e#34#55#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor_1v1.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Scorekeeper/editor_1v1.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="91" selection-end-column="15" />
+              <folding>
+                <element signature="e#2593#2616#0#HTML" expanded="true" />
+                <element signature="e#2754#2777#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor_placements.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/Scorekeeper/editor_placements.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="90" column="58" lean-forward="false" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScorekeeperController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Api/ScorekeeperController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1534">
+              <caret line="96" column="46" lean-forward="false" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
+              <folding>
+                <element signature="e#2739#2770#1#PHP" expanded="true" />
+                <element signature="e#2965#2976#1#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Event.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Twig Template" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Twig Template" />
       </list>
     </option>
   </component>
@@ -60,7 +126,6 @@
         <option value="$PROJECT_DIR$/src/Admin/GroupAdmin.php" />
         <option value="$PROJECT_DIR$/src/Admin/SportAdmin.php" />
         <option value="$PROJECT_DIR$/src/Admin/ScoreAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Form/ScoreType.php" />
         <option value="$PROJECT_DIR$/src/Admin/EventAdmin.php" />
         <option value="$PROJECT_DIR$/config/packages/sonata_core.yaml" />
         <option value="$PROJECT_DIR$/config/packages/fos_user.yaml" />
@@ -81,19 +146,26 @@
         <option value="$PROJECT_DIR$/public/js/placements-template.html" />
         <option value="$PROJECT_DIR$/public/js/template/score-templates.htm" />
         <option value="$PROJECT_DIR$/src/Entity/College.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Api/ResultController.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Score.php" />
         <option value="$PROJECT_DIR$/src/Enum/EventStateEnum.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/SettingsFixtures.php" />
-        <option value="$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig" />
         <option value="$PROJECT_DIR$/public/js/score-loader.js" />
-        <option value="$PROJECT_DIR$/src/Entity/Event.php" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/config/packages/sonata_admin.yaml" />
         <option value="$PROJECT_DIR$/src/Entity/Group.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Scorekeeper/ScoreEditorController.php" />
         <option value="$PROJECT_DIR$/src/Admin/ScorekeeperAuthenticationAdmin.php" />
+        <option value="$PROJECT_DIR$/templates/Scorekeeper/event_picker.html.twig" />
+        <option value="$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/ScorekeeperAuthentication.php" />
+        <option value="$PROJECT_DIR$/src/Form/ScoreType.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Score.php" />
+        <option value="$PROJECT_DIR$/templates/Scorekeeper/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/Scorekeeper/ScoreEditorController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Event.php" />
+        <option value="$PROJECT_DIR$/src/Repository/ScoreRepository.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Api/ResultController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Api/ScorekeeperController.php" />
+        <option value="$PROJECT_DIR$/templates/Scorekeeper/editor_1v1.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Scorekeeper/editor_placements.html.twig" />
       </list>
     </option>
   </component>
@@ -211,9 +283,11 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1280" />
+    <option name="y" value="-280" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -296,23 +370,6 @@
             <path>
               <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -325,24 +382,12 @@
               <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
@@ -370,12 +415,6 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Scorekeeper" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DataFixtures" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
@@ -412,6 +451,12 @@
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="PublicFacing" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Scorekeeper" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -429,6 +474,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Controller/Api" />
+      <recent name="$PROJECT_DIR$/templates/Scorekeeper" />
       <recent name="$PROJECT_DIR$/src/Enum" />
       <recent name="$PROJECT_DIR$/src/Admin" />
       <recent name="$PROJECT_DIR$/src/Entity" />
@@ -476,17 +523,18 @@
       <workItem from="1521629853352" duration="967000" />
       <workItem from="1521648271290" duration="8986000" />
       <workItem from="1521730885715" duration="51000" />
-      <workItem from="1521730989974" duration="8608000" />
+      <workItem from="1521730989974" duration="19391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37351000" />
+    <option name="totallyTimeSpent" value="48134000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21890146" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14430244" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -514,68 +562,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Entity/BaseUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Resources/config/routing/admin_resetting.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/SonataUserBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1019">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Resources/config/admin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Resources/config/routing/admin_security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Admin/Entity/UserAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -605,20 +596,6 @@
     <entry file="file://$PROJECT_DIR$/public/images/stemgames-logo.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.php">
@@ -670,26 +647,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PublicFacing/HomepageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Sport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -732,16 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Score.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="27" column="69" lean-forward="false" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/College.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -750,54 +701,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Api/ResultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-269">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataFixtures/SettingsFixtures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
           <caret line="50" column="36" lean-forward="false" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="93" column="46" lean-forward="false" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
-          <folding>
-            <marker date="1521736961544" expanded="true" signature="2445:2907" ph="..." />
-            <marker date="1521736961544" expanded="true" signature="2485:2601" ph="..." />
-            <marker date="1521736961544" expanded="true" signature="2502:2580" ph="..." />
-            <marker date="1521736961544" expanded="true" signature="2621:2890" ph="..." />
-            <marker date="1521736961544" expanded="true" signature="2667:2847" ph="..." />
-            <marker date="1521736961544" expanded="true" signature="3245:4130" ph="..." />
-            <marker date="1521736961544" expanded="true" signature="3285:3401" ph="..." />
-            <marker date="1521736961544" expanded="true" signature="3306:3380" ph="..." />
-            <marker date="1521736961544" expanded="true" signature="3421:4113" ph="..." />
-            <marker date="1521736961544" expanded="true" signature="3475:4066" ph="..." />
-            <marker date="1521736961544" expanded="true" signature="3614:3930" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/score-loader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -842,16 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Scorekeeper/ScoreEditorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#48#105#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/src/Datagrid/ListMapper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -876,20 +773,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/ScorekeeperAuthentication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="97" column="116" lean-forward="false" selection-start-line="97" selection-start-column="116" selection-end-line="97" selection-end-column="116" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/ScorekeeperAuthenticationAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
           <folding>
-            <element signature="e#31#74#0#PHP" expanded="true" />
+            <element signature="e#31#74#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -910,10 +799,185 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
+        <state relative-caret-position="434">
           <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/twig.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PublicFacing/HomepageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Sport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="118" column="32" lean-forward="false" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ScoreType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Score.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="134" column="20" lean-forward="false" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Scorekeeper/event_picker.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="7" column="99" lean-forward="false" selection-start-line="7" selection-start-column="99" selection-end-line="7" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/ScorekeeperAuthentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="31" column="73" lean-forward="true" selection-start-line="31" selection-start-column="73" selection-end-line="31" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/score-loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-365">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Scorekeeper/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="16" column="193" lean-forward="false" selection-start-line="16" selection-start-column="193" selection-end-line="16" selection-end-column="193" />
+          <folding>
+            <element signature="e#1304#1330#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1957">
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="33" />
+          <folding>
+            <marker date="1521811279965" expanded="true" signature="2447:3185" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="2487:2879" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="2504:2858" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="2537:2840" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="2899:3168" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="2945:3125" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="3523:4408" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="3563:3679" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="3584:3658" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="3699:4391" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="3753:4344" ph="..." />
+            <marker date="1521811279965" expanded="true" signature="3892:4208" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Scorekeeper/ScoreEditorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="993">
+          <caret line="84" column="28" lean-forward="false" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Api/ResultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Scorekeeper/editor_1v1.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="91" selection-end-column="15" />
+          <folding>
+            <element signature="e#2593#2616#0#HTML" expanded="true" />
+            <element signature="e#2754#2777#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/ScoreRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="e#34#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Api/ScorekeeperController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1534">
+          <caret line="96" column="46" lean-forward="false" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
+          <folding>
+            <element signature="e#2739#2770#1#PHP" expanded="true" />
+            <element signature="e#2965#2976#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Scorekeeper/editor_placements.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="90" column="58" lean-forward="false" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
           <folding />
         </state>
       </provider>

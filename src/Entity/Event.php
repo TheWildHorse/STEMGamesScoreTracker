@@ -258,5 +258,4 @@ class Event
         return $this->state;
     }
 
-
 }

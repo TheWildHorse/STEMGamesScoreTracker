@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Event;
 use App\Entity\Score;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
@@ -19,16 +20,15 @@ class ScoreRepository extends ServiceEntityRepository
         parent::__construct($registry, Score::class);
     }
 
-    /*
-    public function findBySomething($value)
+
+    public function clearScores(Event $event)
     {
         return $this->createQueryBuilder('s')
-            ->where('s.something = :value')->setParameter('value', $value)
-            ->orderBy('s.id', 'ASC')
-            ->setMaxResults(10)
+            ->where('s.event = :event')->setParameter('event', $event)
+            ->delete()
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+
 }

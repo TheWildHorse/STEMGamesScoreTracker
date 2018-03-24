@@ -13,6 +13,7 @@ class ScoreType extends AbstractType
     {
         $builder
             ->add('college')
+            ->add('teamName')
             ->add('score')
         ;
     }

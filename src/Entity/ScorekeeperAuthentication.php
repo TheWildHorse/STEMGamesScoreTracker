@@ -29,7 +29,7 @@ class ScorekeeperAuthentication
 
     public function __construct()
     {
-        $this->setCode(base64_encode(random_bytes(30)));
+        $this->setCode(str_replace('/', '', base64_encode(random_bytes(30))));
     }
 
     /**

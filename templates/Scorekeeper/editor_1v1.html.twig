@@ -1,0 +1,118 @@
+{% extends 'Scorekeeper/base.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+                <b>Name: </b> {{ event.name }}<br>
+                <b>Start Time: </b> {{ event.startTime|date('Y-m-d H:i') }}<br>
+            </p>
+            <br>
+            <h1 style="font-size: 3rem">Event Status</h1>
+            <div class="btn-group" role="group" id="state-picker" aria-label="Event State">
+                <button type="button" data-id="1" class="btn {% if event.state == 1%}btn-secondary{% endif %}" style="font-size: 2.5rem"><i class="fa fa-clock-o"></i> Scheduled</button>
+                <button type="button" data-id="2" class="btn {% if event.state == 2%}btn-secondary{% endif %}" style="font-size: 2.5rem"><i class="fa fa-hourglass-half"></i> In Progress</button>
+                <button type="button" data-id="3" class="btn {% if event.state == 3%}btn-secondary{% endif %}" style="font-size: 2.5rem"><i class="fa fa-flag-checkered"></i> Finished</button>
+            </div>
+            <br><br>
+            <h1 style="font-size: 3rem">Score</h1>
+            <table class="table table-bordered table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th>Team</th>
+                        <th>Score</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ event.competitor1.name }}</td>
+                        <td>
+                            <input id="competitor1-score" class="form-control" style="width: 100px; font-size: 1em;" type="number" value="{{ competitor1Score }}" min="0">
+                        </td>
+                        <td>
+                            <button class="btn" data-changes="competitor1-score" id="score-up" style="font-size: 1em;"><i class="fa fa-angle-up"></i></button>
+                            <button class="btn" data-changes="competitor1-score" id="score-down" style="font-size: 1em;"><i class="fa fa-angle-down"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{ event.competitor2.name }}</td>
+                        <td>
+                            <input id="competitor2-score" class="form-control" style="width: 100px; font-size: 1em;" type="number" value="{{ competitor2Score }}" min="0">
+                        </td>
+                        <td>
+                            <button class="btn" data-changes="competitor2-score" id="score-up" style="font-size: 1em;"><i class="fa fa-angle-up"></i></button>
+                            <button class="btn" data-changes="competitor2-score" id="score-down" style="font-size: 1em;"><i class="fa fa-angle-down"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn" id="save-changes" style="font-size: 1em; width: 100%;">Save Changes</button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('#save-changes').click(function () {
+                var self = $(this);
+                $(this).prop('disabled', true);
+                $(this).html('Saving...');
+                $.ajax({
+                    type: "POST",
+                    url: "{{ path('scorekeeper.editor.save', {'code': code, 'eventId': event.id}) }}",
+                    data: JSON.stringify([
+                        {
+                            teamName: "{{ event.competitor1.name }}",
+                            collegeId: {{ event.competitor1.id }},
+                            score: $('#competitor1-score').val()
+                        },
+                        {
+                            teamName: "{{ event.competitor2.name }}",
+                            collegeId: {{ event.competitor2.id }},
+                            score: $('#competitor2-score').val()
+                        }
+                    ]),
+                    contentType: 'application/json'
+                }).done(function (data) {
+                    $(self).prop('disabled', false);
+                    if(data.success === true) {
+                        $(self).html('Saved.');
+                    }
+                    else {
+                        $(self).html('Error occurred! Try again.');
+                    }
+                    setTimeout(function() {
+                        $(self).html('Save changes.');
+                    }, 3000);
+                });
+            });
+
+            $('#score-up').click(function () {
+                var currentValue = parseInt($('#' + $(this).data('changes')).val());
+                $('#' + $(this).data('changes')).val(currentValue+1);
+            });
+            $('#score-down').click(function () {
+                var currentValue = parseInt($('#' + $(this).data('changes')).val());
+                if(currentValue == 0) {
+                    return;
+                }
+                $('#' + $(this).data('changes')).val(currentValue-1);
+            });
+            $('#state-picker button').click(function() {
+                var self = $(this);
+                $.ajax({
+                    type: "POST",
+                    url: "{{ path('scorekeeper.editor.state.save', {'code': code, 'eventId': event.id}) }}",
+                    data: {id:$(self).data('id')}
+                }).done(function() {
+                    $('#state-picker button').removeClass('btn-secondary');
+                    $(self).addClass('btn-secondary');
+                });
+            });
+        });
+    </script>
+{% endblock %}
