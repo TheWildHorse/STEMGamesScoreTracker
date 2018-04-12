@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bf2ad7-3569-4ed8-8e32-2584ef604603" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/public/js/score-loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/score-loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo_title.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/sonata_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/sonata_admin.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +18,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="logo_title.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/bundles/sonataadmin/logo_title.png">
+        <entry file="file://$PROJECT_DIR$/public/images/logo_title.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file leaf-file-name="homepage.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homepage.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="592">
@@ -41,6 +41,15 @@
                 <marker date="1523557874885" expanded="true" signature="5462:6206" ph="..." />
                 <marker date="1523557874885" expanded="true" signature="5601:6070" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sonata_admin.yaml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/packages/sonata_admin.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -125,7 +134,6 @@
         <option value="$PROJECT_DIR$/src/Enum/EventStateEnum.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/SettingsFixtures.php" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
-        <option value="$PROJECT_DIR$/config/packages/sonata_admin.yaml" />
         <option value="$PROJECT_DIR$/src/Entity/Group.php" />
         <option value="$PROJECT_DIR$/src/Admin/ScorekeeperAuthenticationAdmin.php" />
         <option value="$PROJECT_DIR$/templates/Scorekeeper/event_picker.html.twig" />
@@ -143,6 +151,7 @@
         <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/public/js/score-loader.js" />
         <option value="$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig" />
+        <option value="$PROJECT_DIR$/config/packages/sonata_admin.yaml" />
       </list>
     </option>
   </component>
@@ -338,6 +347,17 @@
             <path>
               <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="StemScoreApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StemScoreApp" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -459,10 +479,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/js/template" />
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/bundles/sonataadmin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -506,12 +526,12 @@
       <workItem from="1521648271290" duration="8986000" />
       <workItem from="1521730885715" duration="51000" />
       <workItem from="1521730989974" duration="19554000" />
-      <workItem from="1523554010637" duration="2626000" />
+      <workItem from="1523554010637" duration="2734000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50923000" />
+    <option name="totallyTimeSpent" value="51031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
@@ -729,13 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/sonata_admin.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -865,7 +878,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/bundles/sonataadmin/logo_title.png">
+    <entry file="file://$PROJECT_DIR$/public/images/logo_title.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/main.css">
@@ -900,6 +913,13 @@
             <marker date="1523557874885" expanded="true" signature="5462:6206" ph="..." />
             <marker date="1523557874885" expanded="true" signature="5601:6070" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/sonata_admin.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
         </state>
       </provider>
     </entry>
