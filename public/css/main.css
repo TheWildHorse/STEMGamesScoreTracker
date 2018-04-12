@@ -16,3 +16,17 @@ body {
 	background-color: #32383e;
 	color: #e9ecef;
 }
+
+footer {
+	text-align: center;
+}
+footer a, footer a:visited, footer a:hover, footer a:active {
+	color: white;
+	display: inline-block;
+}
+footer a svg {
+	height: 20px;
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+}

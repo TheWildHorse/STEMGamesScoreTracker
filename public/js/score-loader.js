@@ -15,6 +15,14 @@ Handlebars.registerHelper('getScore', function(collegeId, scores, options) {
     });
     return wantedScore;
 });
+Handlebars.registerHelper('dateFormat', function(context, block) {
+    if (window.moment) {
+        var f = block.hash.format || "MMM Do, YYYY";
+        return moment(Date(context)).format(f);
+    } else {
+        return context;   //  moment plugin not available. return data as is.
+    }
+});
 var placementsTemplate = Handlebars.compile($('#placements-template').html())
 var versusTemplate = Handlebars.compile($('#versus-template').html())
 

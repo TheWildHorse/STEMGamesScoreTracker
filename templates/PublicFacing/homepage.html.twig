@@ -15,6 +15,7 @@
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment-with-locales.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js" integrity="sha256-+JMHsXRyeTsws/tzbIh5YHQxRdKCuNjmvNcTFtY6DLc=" crossorigin="anonymous"></script>
     <script src="/js/score-loader.js"></script>
 {% endblock %}
@@ -39,6 +40,12 @@
             <div class="col-md-9" id="scores-container">
             </div>
         </div>
+        <footer>
+            Made by <a href="https://rinkovec.com"><svg enable-background="new 190 572.326 117.63 117.629" version="1.1" viewBox="190 572.326 117.63 117.629" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                <path d="m248.76 572.33c-32.401 0-58.765 26.363-58.765 58.865 0 32.501 26.363 58.764 58.765 58.764 32.501 0 58.865-26.363 58.865-58.764 0-32.502-26.364-58.865-58.865-58.865zm-23.445 33.809c1.207 0 2.213 1.006 2.213 2.214 0 1.207-1.006 2.213-2.213 2.213-1.208 0-2.214-1.006-2.214-2.213 0-1.208 1.006-2.214 2.214-2.214zm39.947 27.672l9.057 17.608c0.604 1.107 0.101 2.415-1.007 3.02-1.106 0.503-2.415 0.101-3.019-1.007l-8.955-17.609c-0.604-1.207-0.705-2.616-0.201-3.924 0.503-1.309 1.509-2.314 2.817-2.817 4.024-1.51 6.54-5.534 6.138-9.861-0.402-4.528-4.227-8.251-8.754-8.553-2.717-0.202-5.232 0.704-7.245 2.516-1.912 1.811-3.019 4.326-3.019 6.942v21.735c0 7.647-6.139 13.986-13.686 14.188h-0.302c-7.145 0-13.182-5.434-13.886-12.578v-0.201-26.263c0-1.207 1.006-2.214 2.214-2.214 1.207 0 2.213 1.007 2.213 2.214v26.263c0.504 4.729 4.629 8.453 9.459 8.453h0.201c5.132-0.102 9.358-4.428 9.358-9.761v-21.836c0-3.924 1.609-7.647 4.428-10.264 2.918-2.717 6.641-4.024 10.565-3.723 6.641 0.503 12.175 5.937 12.88 12.578 0.604 6.339-3.119 12.275-8.956 14.489l-0.201 0.201c-0.2 0.202-0.2 0.304-0.099 0.404z" fill="#fff"/>
+            </svg> Igor Rinkovec.</a>
+
+        </footer>
     </div>
 
     <script id="placements-template" type="text/x-handlebars-template">
@@ -61,12 +68,17 @@
             </tr>
             </thead>
             <tbody>
+
             {{#each scores}}
             <tr>
                 <th>{{inc @index}}</th>
                 <td>{{ team_name }}</td>
                 <td>{{ college.name }}</td>
                 <td>{{ score }}</td>
+            </tr>
+            {{else}}
+            <tr>
+                <td colspan="4">Starts {{dateFormat start_date format="dddd"}} at {{dateFormat start_date format="h:mm"}}</td>
             </tr>
             {{/each}}
             </tbody>
@@ -92,6 +104,9 @@
                     <td>{{competitor1.name}}</td>
                     <td>{{getScore competitor1.id scores}}</td>
                     <td>
+                        {{#ifEquals state 1}}
+                        {{dateFormat start_date format="dddd h:mm"}}
+                        {{/ifEquals}}
                         {{#ifEquals state 2}}
                         <i class="fa fa-hourglass-half"></i>
                         {{/ifEquals}}
