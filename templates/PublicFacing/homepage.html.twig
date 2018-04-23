@@ -36,6 +36,20 @@
                     <a class="nav-link" href="#" data-sport="{{ sport.name }}"><i class="{{ sport.icon }}"></i> {{ sport.name }}</a>
                     {% endfor %}
                 </nav>
+                <br>
+                <nav class="nav flex-column" id="day-filter-container">
+                    <a class="nav-link" href="#" data-sport="all">Show All</a>
+                    {% for day in days %}
+                        <a class="nav-link" href="#" data-day="{{ day }}"> {{ day }}</a>
+                    {% endfor %}
+                </nav>
+                <br>
+                <nav class="nav flex-column" id="college-filter-container">
+                    <a class="nav-link" href="#" data-college="all">Show All</a>
+                    {% for college in colleges %}
+                        <a class="nav-link" href="#" data-college="{{ college.id }}">{{ college.name }}</a>
+                    {% endfor %}
+                </nav>
             </div>
             <div class="col-md-9" id="scores-container">
             </div>
@@ -90,7 +104,7 @@
 
     <script id="versus-template" type="text/x-handlebars-template">
         {% verbatim %}
-                <h3><i class="{{ icon }}"></i> {{ name }}</h3>
+        <h3><i class="{{ icon }}"></i> {{ name }}</h3>
         {{#each groups}}
         <table class="table table-striped table-bordered table-dark text-center">
             <thead class="thead-light">

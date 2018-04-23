@@ -18,9 +18,14 @@ class HomepageController extends Controller
         $sports = $this->getDoctrine()
             ->getRepository('App:Sport')
             ->findAll();
+        $colleges = $this->getDoctrine()
+            ->getRepository('App:College')
+            ->findAll();
 
         return $this->render('PublicFacing/homepage.html.twig', [
             'sports' => $sports,
+            'colleges' => $colleges,
+            'days' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         ]);
     }
 }
