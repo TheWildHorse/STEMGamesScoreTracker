@@ -105,6 +105,8 @@ $(document).ready(function() {
 
     $('#filter-container a').click(function(e) {
         filter = $(this).data('sport');
+        $('#filter-container a').removeClass('active');
+        $(this).addClass('active');
         if(filter === "all") {
             filter = null;
         }
@@ -116,6 +118,8 @@ $(document).ready(function() {
     });
     $('#college-filter-container a').click(function(e) {
         collegeFilter = $(this).data('college');
+        $('#college-filter-container a').removeClass('active');
+        $(this).addClass('active');
         if(collegeFilter === "all") {
             collegeFilter = null;
         }
@@ -127,6 +131,8 @@ $(document).ready(function() {
     });
     $('#day-filter-container a').click(function(e) {
         dayFilter = $(this).data('day');
+        $('#day-filter-container a').removeClass('active');
+        $(this).addClass('active');
         if(dayFilter === "all") {
             dayFilter = null;
         }

@@ -17,6 +17,11 @@ body {
 	color: #e9ecef;
 }
 
+.nav-link.active {
+	background-color: #32383e;
+	color: #e9ecef;
+}
+
 footer {
 	text-align: center;
 }
@@ -30,3 +35,4 @@ footer a svg {
 	display: inline-block;
 	vertical-align: middle;
 }
+

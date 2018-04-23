@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bf2ad7-3569-4ed8-8e32-2584ef604603" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/score-loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/score-loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig" afterDir="false" />
     </list>
@@ -20,21 +21,21 @@
       <file leaf-file-name="homepage.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+            <state relative-caret-position="527">
+              <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
               <folding>
-                <marker date="1524488474789" expanded="true" signature="4721:5643" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="4761:5153" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="4778:5132" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="4811:5114" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="5173:5626" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="5220:5400" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="5973:7011" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="6013:6129" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="6034:6108" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="6149:6994" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="6203:6947" ph="..." />
-                <marker date="1524488474789" expanded="true" signature="6342:6811" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="4742:5664" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="4782:5174" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="4799:5153" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="4832:5135" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="5194:5647" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="5241:5421" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="5994:7032" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="6034:6150" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="6055:6129" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="6170:7015" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="6224:6968" ph="..." />
+                <marker date="1524489045026" expanded="true" signature="6363:6832" ph="..." />
               </folding>
             </state>
           </provider>
@@ -55,8 +56,17 @@
       <file leaf-file-name="score-loader.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/score-loader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="71" column="29" lean-forward="true" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+            <state relative-caret-position="160">
+              <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -136,10 +146,10 @@
         <option value="$PROJECT_DIR$/src/Controller/Api/ScorekeeperController.php" />
         <option value="$PROJECT_DIR$/templates/Scorekeeper/editor_1v1.html.twig" />
         <option value="$PROJECT_DIR$/templates/Scorekeeper/editor_placements.html.twig" />
-        <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/config/packages/sonata_admin.yaml" />
         <option value="$PROJECT_DIR$/src/Controller/PublicFacing/HomepageController.php" />
         <option value="$PROJECT_DIR$/public/js/score-loader.js" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig" />
       </list>
     </option>
@@ -497,12 +507,12 @@
       <workItem from="1521730989974" duration="19554000" />
       <workItem from="1523554010637" duration="2914000" />
       <workItem from="1524046210252" duration="169000" />
-      <workItem from="1524481377352" duration="2505000" />
+      <workItem from="1524481377352" duration="2917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53885000" />
+    <option name="totallyTimeSpent" value="54297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -865,13 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/PublicFacing/HomepageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-46">
@@ -884,28 +887,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/score-loader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="71" column="29" lean-forward="true" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+        <state relative-caret-position="160">
+          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/PublicFacing/homepage.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+        <state relative-caret-position="527">
+          <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
           <folding>
-            <marker date="1524488474789" expanded="true" signature="4721:5643" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="4761:5153" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="4778:5132" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="4811:5114" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="5173:5626" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="5220:5400" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="5973:7011" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="6013:6129" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="6034:6108" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="6149:6994" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="6203:6947" ph="..." />
-            <marker date="1524488474789" expanded="true" signature="6342:6811" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="4742:5664" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="4782:5174" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="4799:5153" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="4832:5135" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="5194:5647" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="5241:5421" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="5994:7032" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="6034:6150" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="6055:6129" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="6170:7015" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="6224:6968" ph="..." />
+            <marker date="1524489045026" expanded="true" signature="6363:6832" ph="..." />
           </folding>
         </state>
       </provider>
