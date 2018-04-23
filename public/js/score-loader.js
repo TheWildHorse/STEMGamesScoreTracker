@@ -69,6 +69,16 @@ function displayData(dataOriginal) {
         if(sport.groups.length === 0) {
             return;
         }
+        if(dayFilter !== null) {
+            sport.groups.forEach(function (group, index, object) {
+                group.events = group.events.filter(function (event) {
+                    return moment(event.start_time, moment.HTML5_FMT.DATETIME_LOCAL_SECONDS).format('dddd') === dayFilter;
+                });
+                if(group.events.length === 0) {
+                    object.splice(index, 1);
+                }
+            });
+        }
         if(sport.event_type === 2) {
             payload += placementsTemplate(sport)
         }
@@ -77,16 +87,6 @@ function displayData(dataOriginal) {
                 sport.groups.forEach(function (group, index, object) {
                     group.events = group.events.filter(function (event) {
                         return event.competitor1.id == collegeFilter || event.competitor2.id == collegeFilter;
-                    });
-                    if(group.events.length === 0) {
-                        object.splice(index, 1);
-                    }
-                });
-            }
-            if(dayFilter !== null) {
-                sport.groups.forEach(function (group, index, object) {
-                    group.events = group.events.filter(function (event) {
-                        return moment(event.start_time, moment.HTML5_FMT.DATETIME_LOCAL_SECONDS).format('dddd') === dayFilter;
                     });
                     if(group.events.length === 0) {
                         object.splice(index, 1);
