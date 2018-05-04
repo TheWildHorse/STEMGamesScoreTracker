@@ -61,41 +61,48 @@ function loadData() {
 
 function displayData(dataOriginal) {
     var payload = "";
-    data = clone(dataOriginal);
-    data.forEach(function(sport) {
-        if(filter !== null && sport.name !== filter) {
-            return;
+    var data = clone(dataOriginal);
+    for(var sportIndex in data) {
+        // FILTERS
+        if(filter !== null && data[sportIndex].name !== filter) {
+            continue;
         }
-        if(sport.groups.length === 0) {
-            return;
+        if(data[sportIndex].groups.length === 0) {
+            continue;
         }
         if(dayFilter !== null) {
-            sport.groups.forEach(function (group, index, object) {
-                group.events = group.events.filter(function (event) {
+            for(var groupIndex in data[sportIndex].groups) {
+                data[sportIndex].groups[groupIndex].events = data[sportIndex].groups[groupIndex].events.filter(function (event) {
                     return moment(event.start_time, moment.HTML5_FMT.DATETIME_LOCAL_SECONDS).format('dddd') === dayFilter;
                 });
-                if(group.events.length === 0) {
-                    object.splice(index, 1);
-                }
-            });
+            }
         }
-        if(sport.event_type === 2) {
-            payload += placementsTemplate(sport)
-        }
-        else {
-            if(collegeFilter !== null) {
-                sport.groups.forEach(function (group, index, object) {
-                    group.events = group.events.filter(function (event) {
-                        return event.competitor1.id == collegeFilter || event.competitor2.id == collegeFilter;
-                    });
-                    if(group.events.length === 0) {
-                        object.splice(index, 1);
+        if(collegeFilter !== null) {
+            for(var groupIndex in data[sportIndex].groups) {
+                data[sportIndex].groups[groupIndex].events = data[sportIndex].groups[groupIndex].events.filter(function (event) {
+                    if(event.competitor1 === undefined && event.competitor2 === undefined) {
+                        return false;
                     }
+                    return event.competitor1.id == collegeFilter || event.competitor2.id == collegeFilter;
                 });
             }
-            payload += versusTemplate(sport)
         }
-    });
+        // REMOVE EMPTY
+        data[sportIndex].groups = data[sportIndex].groups.filter(function (group) {
+            return group.events.length !== 0;
+        });
+
+        // TEMPLATE GENERATION
+        if(data[sportIndex].groups.length === 0) {
+            continue;
+        }
+        if(data[sportIndex].event_type === 2) {
+            payload += placementsTemplate(data[sportIndex])
+        }
+        else {
+            payload += versusTemplate(data[sportIndex])
+        }
+    }
     $('#scores-container').html(payload);
 }
 
