@@ -17,6 +17,9 @@ class OneSignalService
     }
 
     public function sendMessage($message, $playersIds) {
+        if(empty($playersIds)) {
+            return;
+        }
         $oneSignalComm = $this->container->get('eight_points_guzzle.client.one_signal');
         $oneSignalComm->post('notifications', [
             'json' => [
