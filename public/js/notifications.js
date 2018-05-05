@@ -5,6 +5,9 @@ $(document).ready(function() {
                 $('body').data('notification-id', userId);
             });
         }
+        else {
+            $('.notification-toggle').prop('disabled', true);
+        }
     });
 });
 
@@ -19,6 +22,11 @@ function bindNotificationToggles() {
 }
 
 function refreshSubscriptionState() {
+    var isPushSupported = OneSignal.isPushNotificationsSupported();
+    if(isPushSupported === false) {
+        alert('Notifications are supported on most platforms except those without support for Service Workers. You seem to be using one of the unsupported platforms (probably iOS).');
+        return;
+    }
     var subscribedEvents = [];
     $('.notification-toggle').each(function(item) {
         if($(this).prop("checked")) {
