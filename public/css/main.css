@@ -36,3 +36,12 @@ footer a svg {
 	vertical-align: middle;
 }
 
+.notification-cell {
+	padding: 0 0 !important;
+	vertical-align: middle !important;
+}
+
+.notification-cell label.active {
+	color: orangered !important;
+}
+

@@ -1,0 +1,10 @@
+eight_points_guzzle:
+    clients:
+        one_signal:
+            base_url: "https://onesignal.com/api/v1/"
+            options:
+                timeout: 30
+                headers:
+                    User-Agent: "EightpointsGuzzleBundle/7.0"
+                    Authorization: "Basic %env(one_signal_api_key)%"
+            plugin: ~

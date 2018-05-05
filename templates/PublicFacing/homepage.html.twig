@@ -7,6 +7,16 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/sports.css" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "815fe3f0-04f8-4351-8077-fd7b9d369793",
+            });
+        });
+    </script>
 {% endblock %}
 
 {% block javascripts %}
@@ -18,6 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment-with-locales.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js" integrity="sha256-+JMHsXRyeTsws/tzbIh5YHQxRdKCuNjmvNcTFtY6DLc=" crossorigin="anonymous"></script>
     <script src="/js/score-loader.js"></script>
+    <script src="/js/notifications.js"></script>
 {% endblock %}
 
 {% block body %}
@@ -109,12 +120,19 @@
         <table class="table table-striped table-bordered table-dark text-center">
             <thead class="thead-light">
                 <tr>
-                    <th colspan="5">{{ name }}</th>
+                    <th colspan="6">{{ name }}</th>
                 </tr>
             </thead>
             <tbody>
                 {{#each events}}
                 <tr>
+                    <td class="notification-cell">
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                          <label class="btn btn-sm btn-secondary">
+                            <input data-event-id="{{ id }}" class="notification-toggle" type="checkbox" autocomplete="off"> <i class="fa fa-bell"></i>
+                          </label>
+                        </div>
+                    </td>
                     <td>{{competitor1.name}}</td>
                     <td>{{getScore competitor1.id scores}}</td>
                     <td>

@@ -63,6 +63,11 @@ class Event
     private $competitor2 = null;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\EventNotificationSubscriber", mappedBy="event")
+     */
+    private $notificationSubscribers;
+
+    /**
      * @return mixed
      */
     public function getCompetitor1()
@@ -256,6 +261,24 @@ class Event
     public function getState()
     {
         return $this->state;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNotificationSubscribers()
+    {
+        return $this->notificationSubscribers;
+    }
+
+    /**
+     * @param mixed $notificationSubscribers
+     * @return Event
+     */
+    public function setNotificationSubscribers($notificationSubscribers): Event
+    {
+        $this->notificationSubscribers = $notificationSubscribers;
+        return $this;
     }
 
 }

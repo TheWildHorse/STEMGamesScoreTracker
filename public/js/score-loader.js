@@ -104,6 +104,7 @@ function displayData(dataOriginal) {
         }
     }
     $('#scores-container').html(payload);
+    bindNotificationToggles();
 }
 
 $(document).ready(function() {
